@@ -13,7 +13,7 @@ def get_meter_reading_total_consumption(api_key, mprn, gas_serial_number):
     """
     period_from = datetime(2020, 1, 1, 0, 0, 0)
     url = f"https://api.octopus.energy/v1/gas-meter-points/{mprn}/meters/{gas_serial_number}/consumption/?group_by=quarter&period_from={period_from.isoformat()}Z"
-    total_consumption = 40424
+    total_consumption = 40547
 
     while url:
         response = requests.get(url, auth=HTTPBasicAuth(api_key, ""))
